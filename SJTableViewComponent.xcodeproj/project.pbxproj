@@ -175,6 +175,7 @@
 		042CB0F223920BEE001F5149 /* SJTableViewComponentDemo */ = {
 			isa = PBXGroup;
 			children = (
+				042CB0F423920BEE001F5149 /* SJTableViewComponent */,
 				042CB10823920BEE001F5149 /* 使用案例1 */,
 				042CB0F323920BEE001F5149 /* AppDelegate.h */,
 				042CB12323920BEE001F5149 /* AppDelegate.m */,
@@ -184,7 +185,6 @@
 				042CB12223920BEE001F5149 /* main.m */,
 				042CB10623920BEE001F5149 /* Main.storyboard */,
 				042CB12423920BEE001F5149 /* PrefixHeader.pch */,
-				042CB0F423920BEE001F5149 /* SJTableViewComponent */,
 				042CB12623920BEE001F5149 /* ViewController.h */,
 				042CB10323920BEE001F5149 /* ViewController.m */,
 			);
