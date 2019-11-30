@@ -659,9 +659,9 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = Q6Q27M6XY7;
-				GCC_PREFIX_HEADER = "$(SRCROOT)/SJTableViewComponent/PrefixHeader.pch";
-				INFOPLIST_FILE = SJTableViewComponent/Info.plist;
+				DEVELOPMENT_TEAM = 89RABUQZ2F;
+				GCC_PREFIX_HEADER = "$(SRCROOT)/SJTableViewComponentDemo/PrefixHeader.pch";
+				INFOPLIST_FILE = "$(SRCROOT)/SJTableViewComponentDemo/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -679,9 +679,9 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = Q6Q27M6XY7;
-				GCC_PREFIX_HEADER = "$(SRCROOT)/SJTableViewComponent/PrefixHeader.pch";
-				INFOPLIST_FILE = SJTableViewComponent/Info.plist;
+				DEVELOPMENT_TEAM = 89RABUQZ2F;
+				GCC_PREFIX_HEADER = "$(SRCROOT)/SJTableViewComponentDemo/PrefixHeader.pch";
+				INFOPLIST_FILE = "$(SRCROOT)/SJTableViewComponentDemo/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
