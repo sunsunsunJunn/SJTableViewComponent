@@ -1,0 +1,6 @@
+framework module Pods_SJTableViewComponent {
+  umbrella header "Pods-SJTableViewComponent-umbrella.h"
+
+  export *
+  module * { export * }
+}
