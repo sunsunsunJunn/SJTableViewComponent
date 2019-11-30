@@ -11,7 +11,7 @@ Pod::Spec.new do |spec|
   spec.version      = "1.0.0"
   spec.summary      = "UITableView组件,一个cellModel对应一个cell，用模型控制cell的显示"
   spec.homepage     = "https://github.com/sunsunsunJunn/SJTableViewComponent"
-  s.license         = { :type => "MIT", :file => "LICENSE" }
+  spec.license         = { :type => "MIT", :file => "LICENSE" }
   spec.author       = { "孙俊" => "sundream27@163.com" }
   spec.platform     = :ios, "8.0"
   spec.source       = { :git => "https://github.com/sunsunsunJunn/SJTableViewComponent.git", :tag => "#{spec.version}" }
