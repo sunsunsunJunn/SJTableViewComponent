@@ -15,6 +15,6 @@ Pod::Spec.new do |spec|
   spec.author       = { "孙俊" => "sundream27@163.com" }
   spec.platform     = :ios, "8.0"
   spec.source       = { :git => "https://github.com/sunsunsunJunn/SJTableViewComponent.git", :tag => "#{spec.version}" }
-  spec.source_files = "Classes", "SJTableViewComponent/SJTableViewComponent/**/*.{h,m}"
+  spec.source_files = "SJTableViewComponent/SJTableViewComponent/**/*.{h,m}"
   spec.requires_arc = true
 end
