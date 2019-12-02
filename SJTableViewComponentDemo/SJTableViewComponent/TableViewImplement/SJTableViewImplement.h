@@ -7,7 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
-@class SJTableViewSection;
+#import "SJTableViewSection.h"
 
 NS_ASSUME_NONNULL_BEGIN
 
