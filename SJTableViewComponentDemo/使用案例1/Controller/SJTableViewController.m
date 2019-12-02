@@ -45,7 +45,7 @@
 	SJSectionHeaderViewModel *sectionHeader = [[SJSectionHeaderViewModel alloc] init];
 	SJLeftTitleRightArrowCellModel *address = [SJLeftTitleRightArrowCellModel leftTitleRightArrowCellModelByLeftTitle:@"我的地址" arrowLocalPath:@"mk_return_goods_alert_arrow"];
 	
-	//约束写法 创建多个copy的cellModel 模拟复用的场景
+	//约束写法
 	SJLeftTitleRightCopyCellModel *copy = [[SJLeftTitleRightCopyCellModel alloc] init];
 	copy.leftTitle = @"这里是需要放大的文字这里是需要放大的文字这里是需要放大的文字这里是需要放大的文字这里是需要放大的文字这里是需要放大的文字这里是需要放大的文字这里是需要放大的文字这里是需要放大的文字这里是需要放大的文字这里是需要放大的文字这里是需要放大的文字这里是需要放大的文字这里是需要放大的文字这里是需要放大的文字这里是需要放大的文字这里是需要放大的文字这里是需要放大的文字这里是需要放大的文字这里是需要放大的文字";
 	__weak typeof(self) wSelf = self;
@@ -53,7 +53,7 @@
 		NSLog(@"点击了放大文字");
 		__strong typeof(wSelf) self = wSelf;
 		//cell高度变化 需要清除高度缓存 重新计算
-		[self.tableView cleanCellHeightInCellModel:cellModel];
+		[self.tableView sj_cleanCellHeightInCellModel:cellModel];
 		cellModel.isExpanded = !cellModel.isExpanded;
 		[self.tableView reloadRowsAtIndexPaths:@[[self.tableView sj_indexPathForCellModel:cellModel]] withRowAnimation:UITableViewRowAnimationFade];
 	};

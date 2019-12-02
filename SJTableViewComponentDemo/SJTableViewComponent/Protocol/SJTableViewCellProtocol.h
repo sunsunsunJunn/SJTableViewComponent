@@ -7,7 +7,6 @@
 //
 
 #import <Foundation/Foundation.h>
-
 @protocol SJTableViewCellModelProtocol;
 
 NS_ASSUME_NONNULL_BEGIN

@@ -40,7 +40,7 @@ NS_ASSUME_NONNULL_BEGIN
 - (NSIndexPath *)sj_indexPathForCellModel:(id<SJTableViewCellModelProtocol>)cellModel;
 
 /** 清除cellmodel对应的cell的高度缓存 */
-- (void)cleanCellHeightInCellModel:(id<SJTableViewCellModelProtocol>)cellModel;
+- (void)sj_cleanCellHeightInCellModel:(id<SJTableViewCellModelProtocol>)cellModel;
 
 #pragma mark - tableView的一些回调处理
 

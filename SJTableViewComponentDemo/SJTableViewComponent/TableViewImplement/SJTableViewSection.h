@@ -7,8 +7,8 @@
 //
 
 #import <Foundation/Foundation.h>
-@class SJTableViewCellModelProtocol;
-@class SJTableViewHeaderFooterModelProtocol;
+#import "SJTableViewHeaderFooterModelProtocol.h"
+#import "SJTableViewCellModelProtocol.h"
 
 NS_ASSUME_NONNULL_BEGIN
 

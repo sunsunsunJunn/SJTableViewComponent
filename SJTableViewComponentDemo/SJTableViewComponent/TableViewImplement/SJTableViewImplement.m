@@ -103,10 +103,6 @@
 	return cell;
 }
 
-#pragma mark - 缓存高度管理
-
-
-
 #pragma mark - UITableViewDelegate
 - (void)tableView:(UITableView *)tableView willDisplayCell:(UITableViewCell *)cell forRowAtIndexPath:(NSIndexPath *)indexPath {
 	SJTableViewSection *tableViewSection = self.sectionArray[indexPath.section];
@@ -115,6 +111,7 @@
 	CGFloat cellHeight = cell.frame.size.height;
 	CGFloat cacheHeight = cellModel.sj_cellHeight;
 
+	//高度缓存处理
 	if (cacheHeight == 0
 			|| cacheHeight != cellHeight) {
 		cellModel.sj_cellHeight = cellHeight;

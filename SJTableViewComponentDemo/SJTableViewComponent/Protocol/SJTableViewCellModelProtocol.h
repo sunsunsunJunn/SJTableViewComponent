@@ -6,9 +6,6 @@
 //  Copyright © 2019 SUNJUN. All rights reserved.
 //
 
-#import <Foundation/Foundation.h>
-#import <UIKit/UIKit.h>
-
 @protocol SJTableViewCellProtocol;
 
 NS_ASSUME_NONNULL_BEGIN
@@ -21,7 +18,7 @@ NS_ASSUME_NONNULL_BEGIN
 @required
 
 /** CellModel对应的Cell的类型 */
-- (Class<SJTableViewCellProtocol>)sj_cellClass;
+- (Class <SJTableViewCellProtocol>)sj_cellClass;
 
 /** CellModel对应的Cell的高度 设置为0是自动计算 设置>0则是设置的固定高度 */
 @property (nonatomic, assign) CGFloat sj_cellHeight;

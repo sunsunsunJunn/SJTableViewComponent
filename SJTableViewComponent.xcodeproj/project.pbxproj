@@ -196,9 +196,9 @@
 			children = (
 				042CB0F523920BEE001F5149 /* SJTableViewComponent.h */,
 				042CB0F623920BEE001F5149 /* UITableView+SJComponent.h */,
+				042CB10123920BEE001F5149 /* UITableView+SJComponent.m */,
 				042CB0F723920BEE001F5149 /* Protocol */,
 				042CB0FC23920BEE001F5149 /* TableViewImplement */,
-				042CB10123920BEE001F5149 /* UITableView+SJComponent.m */,
 			);
 			path = SJTableViewComponent;
 			sourceTree = "<group>";
@@ -217,9 +217,9 @@
 		042CB0FC23920BEE001F5149 /* TableViewImplement */ = {
 			isa = PBXGroup;
 			children = (
-				042CB0FD23920BEE001F5149 /* SJTableViewSection.h */,
-				042CB0FE23920BEE001F5149 /* SJTableViewImplement.m */,
 				042CB0FF23920BEE001F5149 /* SJTableViewImplement.h */,
+				042CB0FE23920BEE001F5149 /* SJTableViewImplement.m */,
+				042CB0FD23920BEE001F5149 /* SJTableViewSection.h */,
 				042CB10023920BEE001F5149 /* SJTableViewSection.m */,
 			);
 			path = TableViewImplement;
@@ -238,16 +238,16 @@
 		042CB10923920BEE001F5149 /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
-				042CB10A23920BEE001F5149 /* SJLeftTitleRightCopyCellModel.m */,
-				042CB10B23920BEE001F5149 /* SJLeftTitleRightArrowCellModel.h */,
-				042CB10C23920BEE001F5149 /* SJAvartarCellModel.m */,
-				042CB10D23920BEE001F5149 /* SJSectionHeaderViewModel.m */,
-				042CB10E23920BEE001F5149 /* SJLeftTitleRightTitleCellModel.h */,
 				042CB10F23920BEE001F5149 /* SJAvartarCellModel.h */,
-				042CB11023920BEE001F5149 /* SJLeftTitleRightCopyCellModel.h */,
+				042CB10C23920BEE001F5149 /* SJAvartarCellModel.m */,
+				042CB10B23920BEE001F5149 /* SJLeftTitleRightArrowCellModel.h */,
 				042CB11123920BEE001F5149 /* SJLeftTitleRightArrowCellModel.m */,
-				042CB11223920BEE001F5149 /* SJSectionHeaderViewModel.h */,
+				042CB11023920BEE001F5149 /* SJLeftTitleRightCopyCellModel.h */,
+				042CB10A23920BEE001F5149 /* SJLeftTitleRightCopyCellModel.m */,
+				042CB10E23920BEE001F5149 /* SJLeftTitleRightTitleCellModel.h */,
 				042CB11323920BEE001F5149 /* SJLeftTitleRightTitleCellModel.m */,
+				042CB11223920BEE001F5149 /* SJSectionHeaderViewModel.h */,
+				042CB10D23920BEE001F5149 /* SJSectionHeaderViewModel.m */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -264,16 +264,16 @@
 		042CB11723920BEE001F5149 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				042CB11823920BEE001F5149 /* SJLeftTitleRightTitleCell.h */,
-				042CB11923920BEE001F5149 /* SJLeftTitleRightCopyCell.m */,
-				042CB11A23920BEE001F5149 /* SJSectionHeaderView.h */,
 				042CB11B23920BEE001F5149 /* SJAvartarCell.h */,
-				042CB11C23920BEE001F5149 /* SJLeftTitleRightArrowCell.h */,
-				042CB11D23920BEE001F5149 /* SJSectionHeaderView.m */,
-				042CB11E23920BEE001F5149 /* SJLeftTitleRightCopyCell.h */,
-				042CB11F23920BEE001F5149 /* SJLeftTitleRightTitleCell.m */,
-				042CB12023920BEE001F5149 /* SJLeftTitleRightArrowCell.m */,
 				042CB12123920BEE001F5149 /* SJAvartarCell.m */,
+				042CB11C23920BEE001F5149 /* SJLeftTitleRightArrowCell.h */,
+				042CB12023920BEE001F5149 /* SJLeftTitleRightArrowCell.m */,
+				042CB11E23920BEE001F5149 /* SJLeftTitleRightCopyCell.h */,
+				042CB11923920BEE001F5149 /* SJLeftTitleRightCopyCell.m */,
+				042CB11823920BEE001F5149 /* SJLeftTitleRightTitleCell.h */,
+				042CB11F23920BEE001F5149 /* SJLeftTitleRightTitleCell.m */,
+				042CB11A23920BEE001F5149 /* SJSectionHeaderView.h */,
+				042CB11D23920BEE001F5149 /* SJSectionHeaderView.m */,
 			);
 			path = View;
 			sourceTree = "<group>";

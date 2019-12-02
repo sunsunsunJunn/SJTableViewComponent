@@ -7,7 +7,6 @@
 //
 
 #import <Foundation/Foundation.h>
-
 @protocol SJTableViewHeaderFooterModelProtocol;
 
 NS_ASSUME_NONNULL_BEGIN

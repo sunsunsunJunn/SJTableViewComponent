@@ -58,7 +58,7 @@
 	return [self.sj_tableViewImplement indexPathForCellModel:cellModel];
 }
 
-- (void)cleanCellHeightInCellModel:(id<SJTableViewCellModelProtocol>)cellModel {
+- (void)sj_cleanCellHeightInCellModel:(id<SJTableViewCellModelProtocol>)cellModel {
 	cellModel.sj_cellHeight = 0;
 }
 
