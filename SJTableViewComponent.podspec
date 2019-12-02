@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |spec|
   spec.name         = "SJTableViewComponent"
-  spec.version      = "1.0.0"
+  spec.version      = "1.0.1"
   spec.summary      = "UITableView组件,一个cellModel对应一个cell，用模型控制cell的显示"
   spec.homepage     = "https://github.com/sunsunsunJunn/SJTableViewComponent"
   spec.license         = { :type => "MIT", :file => "LICENSE" }
