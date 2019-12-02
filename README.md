@@ -1,6 +1,6 @@
 # SJTableViewComponent
 
-![Cocoapods](https://img.shields.io/cocoapods/v/SJTableViewComponent)&nbsp;
+[![Cocoapods](https://img.shields.io/cocoapods/v/SJTableViewComponent)](https://cocoapods.org/pods/SJTableViewComponent)&nbsp;
 
 
 UITableView组件
