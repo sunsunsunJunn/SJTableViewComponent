@@ -70,7 +70,7 @@
 	SJTableViewSection *tableViewSection = self.sectionArray[indexPath.section];
 	id<SJTableViewCellModelProtocol>cellModel = tableViewSection.rowArray[indexPath.row];
 	
-	Class cellClass = [cellModel sj_cellClass] ? [cellModel sj_cellClass] : UITableView.class;
+	Class cellClass = [cellModel sj_cellClass] ? [cellModel sj_cellClass] : UITableViewCell.class;
 	NSString *cellIdentifier = NSStringFromClass(cellClass);
 	if (![self isRegistedCellIdentifier:cellIdentifier]) {
 		NSString *path = [[NSBundle mainBundle] pathForResource:NSStringFromClass(cellClass) ofType:@"nib"];
