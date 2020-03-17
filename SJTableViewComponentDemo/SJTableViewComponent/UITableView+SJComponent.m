@@ -19,11 +19,11 @@
 
 - (NSMutableArray<id<SJTableViewCellModelProtocol>> *)sj_oneSectionRowArray {
 	NSMutableArray *rowArray = objc_getAssociatedObject(self, _cmd);
-	
 	if (!rowArray) {
 		rowArray = [NSMutableArray array];
 		self.sj_oneSectionRowArray = rowArray;
 	}
+  
 	return rowArray;
 }
 
@@ -81,6 +81,7 @@
 
 - (void)setSj_tableViewImplement:(SJTableViewImplement *)sj_tableViewImplement {
 	sj_tableViewImplement.sectionArray = self.sj_sectionArray;
+  
 	__weak typeof(self) wSelf = self;
 	sj_tableViewImplement.didSelectRowAtIndexPathBlock = ^(UITableView * _Nonnull tableView, NSIndexPath * _Nonnull indexPath) {
 		__strong typeof(wSelf) self = wSelf;
@@ -88,15 +89,18 @@
 			self.sj_didSelectRowAtIndexPathBlock(tableView, indexPath);
 		}
 	};
-	sj_tableViewImplement.willConfigureCellAtIndexPathBlock = ^(UITableViewCell * _Nonnull cell, NSIndexPath * _Nonnull indexPath) {
+	
+  sj_tableViewImplement.willConfigureCellAtIndexPathBlock = ^(UITableViewCell * _Nonnull cell, NSIndexPath * _Nonnull indexPath) {
 		__strong typeof(wSelf) self = wSelf;
 		if (self.sj_willConfigureCellAtIndexPathBlock) {
 			self.sj_willConfigureCellAtIndexPathBlock(cell, indexPath);
 		}
 	};
-	self.delegate = sj_tableViewImplement;
+	
+  self.delegate = sj_tableViewImplement;
 	self.dataSource = sj_tableViewImplement;
-	objc_setAssociatedObject(self, @selector(sj_tableViewImplement), sj_tableViewImplement, OBJC_ASSOCIATION_RETAIN_NONATOMIC);
+	
+  objc_setAssociatedObject(self, @selector(sj_tableViewImplement), sj_tableViewImplement, OBJC_ASSOCIATION_RETAIN_NONATOMIC);
 }
 
 - (SJTableViewImplement *)sj_tableViewImplement {
@@ -116,7 +120,6 @@
 - (void (^)(UITableViewCell * _Nonnull, NSIndexPath * _Nonnull))sj_willConfigureCellAtIndexPathBlock {
 	return objc_getAssociatedObject(self, _cmd);
 }
-
 
 - (void)setSj_didSelectRowAtIndexPathBlock:(void (^)(UITableView * _Nonnull, NSIndexPath * _Nonnull))sj_didSelectRowAtIndexPathBlock{
 	objc_setAssociatedObject(self, @selector(sj_didSelectRowAtIndexPathBlock), sj_didSelectRowAtIndexPathBlock, OBJC_ASSOCIATION_COPY_NONATOMIC);
