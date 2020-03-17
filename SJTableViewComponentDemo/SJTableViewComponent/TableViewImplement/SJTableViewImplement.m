@@ -119,12 +119,6 @@
   }
 }
 
-- (CGFloat)tableView:(UITableView *)tableView estimatedHeightForRowAtIndexPath:(NSIndexPath *)indexPath {
-  SJTableViewSection *tableViewSection = self.sectionArray[indexPath.section];
-  id<SJTableViewCellModelProtocol>cellModel = tableViewSection.rowArray[indexPath.row];
-  return cellModel.sj_cellHeight ?: UITableViewAutomaticDimension;
-}
-
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
   SJTableViewSection *tableViewSection = self.sectionArray[indexPath.section];
   id<SJTableViewCellModelProtocol>cellModel = tableViewSection.rowArray[indexPath.row];

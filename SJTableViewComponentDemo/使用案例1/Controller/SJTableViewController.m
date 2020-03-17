@@ -27,9 +27,10 @@
 	self.view.backgroundColor = [UIColor whiteColor];
 	
 	UITableView *tableView = [[UITableView alloc] initWithFrame:CGRectMake(0, 0, self.view.bounds.size.width, self.view.bounds.size.height) style:UITableViewStyleGrouped];
+  tableView.estimatedRowHeight = 40;
 	[self.view addSubview:tableView];
 	self.tableView = tableView;
-	
+  
 	//数据创建 可以放在一个viewModel中网络请求后处理
 	self.dataSource = [NSMutableArray array];
 	[self createDataSource];
