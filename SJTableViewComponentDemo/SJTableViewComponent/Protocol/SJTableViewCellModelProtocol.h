@@ -28,6 +28,9 @@ NS_ASSUME_NONNULL_BEGIN
 /** cell 对应的数据模型 */
 - (id)sj_cellModel;
 
+/** cell 的复用标识 不设置的话默认是sj_cellClass对应的string */
+- (NSString *)sj_cellReuseIdentifier;
+
 @end
 
 NS_ASSUME_NONNULL_END
