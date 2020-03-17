@@ -27,6 +27,7 @@
 	self.view.backgroundColor = [UIColor whiteColor];
 	
 	UITableView *tableView = [[UITableView alloc] initWithFrame:CGRectMake(0, 0, self.view.bounds.size.width, self.view.bounds.size.height) style:UITableViewStyleGrouped];
+  // cell高度由控件撑开需写这句
   tableView.estimatedRowHeight = 40;
 	[self.view addSubview:tableView];
 	self.tableView = tableView;
