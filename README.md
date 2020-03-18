@@ -60,8 +60,8 @@ cell实现<SJTableViewCellProtocol>协议可选择实现赋值的方法：
 
 ## 版本更新记录
 
-### 1.1.0 
-删除implement中的tableView的预估高度代理，需要使用cell由内部空间撑开，外部tableView设置 tableView.estimatedRowHeight = xx;
+### 1.1.0 - 修复section=0时 tableview代理顺序可能会出现异常的问题
+删除implement中的tableView的预估高度代理，需要使用cell由内部空间撑开，外部tableView需设置 
 ```
-- (CGFloat)tableView:(UITableView *)tableView estimatedHeightForRowAtIndexPath:(NSIndexPath *)indexPath {}
+tableView.estimatedRowHeight = xx;
 ```
