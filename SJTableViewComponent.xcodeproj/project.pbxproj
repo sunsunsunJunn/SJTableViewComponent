@@ -30,6 +30,8 @@
 		042CB13923920BEE001F5149 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 042CB12223920BEE001F5149 /* main.m */; };
 		042CB13A23920BEE001F5149 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 042CB12323920BEE001F5149 /* AppDelegate.m */; };
 		042CB13B23920BEE001F5149 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 042CB12523920BEE001F5149 /* Info.plist */; };
+		04489C8524285A350007BAAC /* SJTableViewPlaceholderHeaderFooterModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 04489C8424285A350007BAAC /* SJTableViewPlaceholderHeaderFooterModel.m */; };
+		04489C8824285B6E0007BAAC /* SJTableViewPlaceholderHeaderFooterView.m in Sources */ = {isa = PBXBuildFile; fileRef = 04489C8724285B6E0007BAAC /* SJTableViewPlaceholderHeaderFooterView.m */; };
 		325B31528E5FE820D8979D79 /* Pods_SJTableViewComponent.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 750788471ACE6D60FD40D62E /* Pods_SJTableViewComponent.framework */; };
 /* End PBXBuildFile section */
 
@@ -101,6 +103,10 @@
 		042CB12423920BEE001F5149 /* PrefixHeader.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
 		042CB12523920BEE001F5149 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		042CB12623920BEE001F5149 /* ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		04489C8324285A350007BAAC /* SJTableViewPlaceholderHeaderFooterModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SJTableViewPlaceholderHeaderFooterModel.h; sourceTree = "<group>"; };
+		04489C8424285A350007BAAC /* SJTableViewPlaceholderHeaderFooterModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SJTableViewPlaceholderHeaderFooterModel.m; sourceTree = "<group>"; };
+		04489C8624285B6E0007BAAC /* SJTableViewPlaceholderHeaderFooterView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SJTableViewPlaceholderHeaderFooterView.h; sourceTree = "<group>"; };
+		04489C8724285B6E0007BAAC /* SJTableViewPlaceholderHeaderFooterView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SJTableViewPlaceholderHeaderFooterView.m; sourceTree = "<group>"; };
 		45706CE49F29351E72BC631B /* Pods-SJTableViewComponent.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SJTableViewComponent.debug.xcconfig"; path = "Target Support Files/Pods-SJTableViewComponent/Pods-SJTableViewComponent.debug.xcconfig"; sourceTree = "<group>"; };
 		750788471ACE6D60FD40D62E /* Pods_SJTableViewComponent.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SJTableViewComponent.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		CD59C8393F4BD032BCAB54B3 /* Pods-SJTableViewComponent.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SJTableViewComponent.release.xcconfig"; path = "Target Support Files/Pods-SJTableViewComponent/Pods-SJTableViewComponent.release.xcconfig"; sourceTree = "<group>"; };
@@ -197,6 +203,7 @@
 				042CB0F523920BEE001F5149 /* SJTableViewComponent.h */,
 				042CB0F623920BEE001F5149 /* UITableView+SJComponent.h */,
 				042CB10123920BEE001F5149 /* UITableView+SJComponent.m */,
+				04489C82242858C90007BAAC /* Defalut */,
 				042CB0F723920BEE001F5149 /* Protocol */,
 				042CB0FC23920BEE001F5149 /* TableViewImplement */,
 			);
@@ -276,6 +283,17 @@
 				042CB11D23920BEE001F5149 /* SJSectionHeaderView.m */,
 			);
 			path = View;
+			sourceTree = "<group>";
+		};
+		04489C82242858C90007BAAC /* Defalut */ = {
+			isa = PBXGroup;
+			children = (
+				04489C8324285A350007BAAC /* SJTableViewPlaceholderHeaderFooterModel.h */,
+				04489C8424285A350007BAAC /* SJTableViewPlaceholderHeaderFooterModel.m */,
+				04489C8624285B6E0007BAAC /* SJTableViewPlaceholderHeaderFooterView.h */,
+				04489C8724285B6E0007BAAC /* SJTableViewPlaceholderHeaderFooterView.m */,
+			);
+			path = Defalut;
 			sourceTree = "<group>";
 		};
 		3A8BC165B4B73AE66BBD6412 /* Pods */ = {
@@ -474,6 +492,7 @@
 				042CB13323920BEE001F5149 /* SJTableViewController.m in Sources */,
 				042CB12823920BEE001F5149 /* SJTableViewSection.m in Sources */,
 				042CB13423920BEE001F5149 /* SJLeftTitleRightCopyCell.m in Sources */,
+				04489C8524285A350007BAAC /* SJTableViewPlaceholderHeaderFooterModel.m in Sources */,
 				042CB13023920BEE001F5149 /* SJSectionHeaderViewModel.m in Sources */,
 				042CB13623920BEE001F5149 /* SJLeftTitleRightTitleCell.m in Sources */,
 				042CB13923920BEE001F5149 /* main.m in Sources */,
@@ -487,6 +506,7 @@
 				042CB13A23920BEE001F5149 /* AppDelegate.m in Sources */,
 				042CB13523920BEE001F5149 /* SJSectionHeaderView.m in Sources */,
 				042CB12E23920BEE001F5149 /* SJLeftTitleRightCopyCellModel.m in Sources */,
+				04489C8824285B6E0007BAAC /* SJTableViewPlaceholderHeaderFooterView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -667,7 +687,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.0.6;
+				MARKETING_VERSION = 1.1.1;
 				PRODUCT_BUNDLE_IDENTIFIER = HZMK.SJTableViewComponent;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -688,7 +708,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.0.6;
+				MARKETING_VERSION = 1.1.1;
 				PRODUCT_BUNDLE_IDENTIFIER = HZMK.SJTableViewComponent;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = "1,2";

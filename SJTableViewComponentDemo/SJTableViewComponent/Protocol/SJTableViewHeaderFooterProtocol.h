@@ -12,7 +12,7 @@
 NS_ASSUME_NONNULL_BEGIN
 
 /**
- UITableViewHeaderFooterView 配置协议
+ * UITableViewHeaderFooterView 配置协议
  */
 @protocol SJTableViewHeaderFooterProtocol <NSObject>
 

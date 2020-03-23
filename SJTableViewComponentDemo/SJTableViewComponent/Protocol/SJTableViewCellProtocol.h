@@ -12,17 +12,17 @@
 NS_ASSUME_NONNULL_BEGIN
 
 /**
- UITableView cell 配置协议
+ * UITableView cell 配置协议
  */
 @protocol SJTableViewCellProtocol <NSObject>
 
 @optional
 
 /**
-* @brief  根据数据配置Cell的UI
-*
-* @param  cellModel cell对应的数据
-*/
+ * @brief  根据数据配置Cell的UI
+ *
+ * @param  cellModel cell对应的数据
+ */
 - (void)sj_configureCellByCellModel:(id<SJTableViewCellModelProtocol>)cellModel;
 
 /**

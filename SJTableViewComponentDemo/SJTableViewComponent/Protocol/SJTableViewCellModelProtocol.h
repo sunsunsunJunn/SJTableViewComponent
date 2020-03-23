@@ -11,7 +11,7 @@
 NS_ASSUME_NONNULL_BEGIN
 
 /**
- UITableView cell 模型 配置协议
+ * UITableView cell 模型 配置协议
  */
 @protocol SJTableViewCellModelProtocol <NSObject>
 

@@ -81,6 +81,11 @@
 		
 	//多个section
 	SJTableViewSection *section0 = [[SJTableViewSection alloc] init];
+  //使用默认样式header footer
+  SJTableViewPlaceholderHeaderFooterModel *defaultHeader = [[SJTableViewPlaceholderHeaderFooterModel alloc] init];
+  defaultHeader.backgroundColor = [UIColor greenColor];
+  defaultHeader.height = 10;
+  section0.header = defaultHeader;
 	section0.rowArray = @[avartar,
 												name,
 												number,

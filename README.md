@@ -65,3 +65,12 @@ cell实现<SJTableViewCellProtocol>协议可选择实现赋值的方法：
 ```
 tableView.estimatedRowHeight = xx;
 ```
+
+### 1.1.1 -  新增sectionHeader 占位样式model 用于快速构建无需定制样式的占位header或footer
+
+```
+SJTableViewPlaceholderHeaderFooterModel *defaultHeader = [[SJTableViewPlaceholderHeaderFooterModel alloc] init];
+defaultHeader.backgroundColor = [UIColor greenColor];
+defaultHeader.height = 10;
+section0.header = defaultHeader;
+```

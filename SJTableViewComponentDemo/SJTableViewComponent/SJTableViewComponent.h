@@ -10,5 +10,6 @@
 #define SJTableViewComponent_h
 
 #import "UITableView+SJComponent.h"
+#import "SJTableViewPlaceholderHeaderFooterModel.h"
 
 #endif /* SJTableViewComponent_h */
