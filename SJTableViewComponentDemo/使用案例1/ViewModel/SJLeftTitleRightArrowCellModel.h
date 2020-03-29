@@ -13,10 +13,8 @@ NS_ASSUME_NONNULL_BEGIN
 @interface SJLeftTitleRightArrowCellModel : NSObject<SJTableViewCellModelProtocol>
 
 @property (nonatomic, strong) NSString *leftTitle;
-@property (nonatomic, strong) NSString *arrowLocalPath;
 
-+ (instancetype)leftTitleRightArrowCellModelByLeftTitle:(NSString *)leftTitle
-																 arrowLocalPath:(NSString *)arrowLocalPath;
++ (instancetype)leftTitleRightArrowCellModelByLeftTitle:(NSString *)leftTitle;
 
 @end
 

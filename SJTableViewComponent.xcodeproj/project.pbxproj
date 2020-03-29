@@ -32,6 +32,8 @@
 		042CB13B23920BEE001F5149 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 042CB12523920BEE001F5149 /* Info.plist */; };
 		04489C8524285A350007BAAC /* SJTableViewPlaceholderHeaderFooterModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 04489C8424285A350007BAAC /* SJTableViewPlaceholderHeaderFooterModel.m */; };
 		04489C8824285B6E0007BAAC /* SJTableViewPlaceholderHeaderFooterView.m in Sources */ = {isa = PBXBuildFile; fileRef = 04489C8724285B6E0007BAAC /* SJTableViewPlaceholderHeaderFooterView.m */; };
+		048A6CEC2430E23F00E499D0 /* SJTableViewViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 048A6CEB2430E23F00E499D0 /* SJTableViewViewModel.m */; };
+		048A6CF02430E2E100E499D0 /* SJMineModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 048A6CEF2430E2E100E499D0 /* SJMineModel.m */; };
 		325B31528E5FE820D8979D79 /* Pods_SJTableViewComponent.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 750788471ACE6D60FD40D62E /* Pods_SJTableViewComponent.framework */; };
 /* End PBXBuildFile section */
 
@@ -107,6 +109,10 @@
 		04489C8424285A350007BAAC /* SJTableViewPlaceholderHeaderFooterModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SJTableViewPlaceholderHeaderFooterModel.m; sourceTree = "<group>"; };
 		04489C8624285B6E0007BAAC /* SJTableViewPlaceholderHeaderFooterView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SJTableViewPlaceholderHeaderFooterView.h; sourceTree = "<group>"; };
 		04489C8724285B6E0007BAAC /* SJTableViewPlaceholderHeaderFooterView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SJTableViewPlaceholderHeaderFooterView.m; sourceTree = "<group>"; };
+		048A6CEA2430E23F00E499D0 /* SJTableViewViewModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SJTableViewViewModel.h; sourceTree = "<group>"; };
+		048A6CEB2430E23F00E499D0 /* SJTableViewViewModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SJTableViewViewModel.m; sourceTree = "<group>"; };
+		048A6CEE2430E2E100E499D0 /* SJMineModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SJMineModel.h; sourceTree = "<group>"; };
+		048A6CEF2430E2E100E499D0 /* SJMineModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SJMineModel.m; sourceTree = "<group>"; };
 		45706CE49F29351E72BC631B /* Pods-SJTableViewComponent.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SJTableViewComponent.debug.xcconfig"; path = "Target Support Files/Pods-SJTableViewComponent/Pods-SJTableViewComponent.debug.xcconfig"; sourceTree = "<group>"; };
 		750788471ACE6D60FD40D62E /* Pods_SJTableViewComponent.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SJTableViewComponent.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		CD59C8393F4BD032BCAB54B3 /* Pods-SJTableViewComponent.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SJTableViewComponent.release.xcconfig"; path = "Target Support Files/Pods-SJTableViewComponent/Pods-SJTableViewComponent.release.xcconfig"; sourceTree = "<group>"; };
@@ -235,6 +241,7 @@
 		042CB10823920BEE001F5149 /* 使用案例1 */ = {
 			isa = PBXGroup;
 			children = (
+				048A6CED2430E29800E499D0 /* Model */,
 				042CB10923920BEE001F5149 /* ViewModel */,
 				042CB11423920BEE001F5149 /* Controller */,
 				042CB11723920BEE001F5149 /* View */,
@@ -255,6 +262,8 @@
 				042CB11323920BEE001F5149 /* SJLeftTitleRightTitleCellModel.m */,
 				042CB11223920BEE001F5149 /* SJSectionHeaderViewModel.h */,
 				042CB10D23920BEE001F5149 /* SJSectionHeaderViewModel.m */,
+				048A6CEA2430E23F00E499D0 /* SJTableViewViewModel.h */,
+				048A6CEB2430E23F00E499D0 /* SJTableViewViewModel.m */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -294,6 +303,15 @@
 				04489C8724285B6E0007BAAC /* SJTableViewPlaceholderHeaderFooterView.m */,
 			);
 			path = Defalut;
+			sourceTree = "<group>";
+		};
+		048A6CED2430E29800E499D0 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				048A6CEE2430E2E100E499D0 /* SJMineModel.h */,
+				048A6CEF2430E2E100E499D0 /* SJMineModel.m */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 		3A8BC165B4B73AE66BBD6412 /* Pods */ = {
@@ -493,6 +511,8 @@
 				042CB12823920BEE001F5149 /* SJTableViewSection.m in Sources */,
 				042CB13423920BEE001F5149 /* SJLeftTitleRightCopyCell.m in Sources */,
 				04489C8524285A350007BAAC /* SJTableViewPlaceholderHeaderFooterModel.m in Sources */,
+				048A6CEC2430E23F00E499D0 /* SJTableViewViewModel.m in Sources */,
+				048A6CF02430E2E100E499D0 /* SJMineModel.m in Sources */,
 				042CB13023920BEE001F5149 /* SJSectionHeaderViewModel.m in Sources */,
 				042CB13623920BEE001F5149 /* SJLeftTitleRightTitleCell.m in Sources */,
 				042CB13923920BEE001F5149 /* main.m in Sources */,

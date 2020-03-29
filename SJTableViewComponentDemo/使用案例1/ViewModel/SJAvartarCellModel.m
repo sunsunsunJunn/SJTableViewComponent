@@ -13,11 +13,10 @@
 
 @synthesize sj_cellHeight = _sj_cellHeight;
 
-+ (instancetype)avartarCellModelByLeftTitle:(NSString *)leftTitle avartarURL:(NSString *)avartarURL arrowLocalPath:(NSString *)arrowLocalPath {
++ (instancetype)avartarCellModelByLeftTitle:(NSString *)leftTitle avartarURL:(NSString *)avartarURL {
 	SJAvartarCellModel *model = [[SJAvartarCellModel alloc] init];
 	model.leftTitle = leftTitle;
 	model.avartarURL = avartarURL;
-	model.arrowLocalPath = arrowLocalPath;
 	model.sj_cellHeight = 70.f;
 	return model;
 }

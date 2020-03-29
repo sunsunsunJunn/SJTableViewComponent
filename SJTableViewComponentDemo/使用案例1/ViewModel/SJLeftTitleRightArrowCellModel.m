@@ -13,10 +13,9 @@
 
 @synthesize sj_cellHeight = _sj_cellHeight;
 
-+ (instancetype)leftTitleRightArrowCellModelByLeftTitle:(NSString *)leftTitle arrowLocalPath:(NSString *)arrowLocalPath {
++ (instancetype)leftTitleRightArrowCellModelByLeftTitle:(NSString *)leftTitle {
 	SJLeftTitleRightArrowCellModel *model = [[SJLeftTitleRightArrowCellModel alloc] init];
 	model.leftTitle = leftTitle;
-	model.arrowLocalPath = arrowLocalPath;
 	model.sj_cellHeight = 70.f;
 	return model;
 }

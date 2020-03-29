@@ -14,11 +14,9 @@ NS_ASSUME_NONNULL_BEGIN
 
 @property (nonatomic, strong) NSString *leftTitle;
 @property (nonatomic, copy) NSString *avartarURL;
-@property (nonatomic, strong) NSString *arrowLocalPath;
 
 + (instancetype)avartarCellModelByLeftTitle:(NSString *)leftTitle
-																 avartarURL:(NSString *)avartarURL
-														 arrowLocalPath:(NSString *)arrowLocalPath;
+																 avartarURL:(NSString *)avartarURL;
 @end
 
 NS_ASSUME_NONNULL_END

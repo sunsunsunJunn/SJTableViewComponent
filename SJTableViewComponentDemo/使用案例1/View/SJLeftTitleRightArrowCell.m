@@ -20,6 +20,7 @@
 
 - (instancetype)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString *)reuseIdentifier {
 	if (self = [super initWithStyle:style reuseIdentifier:reuseIdentifier]) {
+    self.selectionStyle = UITableViewCellSelectionStyleNone;
 		[self configureSubViews];
 	}
 	return self;
@@ -32,6 +33,7 @@
 	[self.contentView addSubview:self.leftLabel];
 	
 	self.arrowImageView = [[UIImageView alloc] init];
+  self.arrowImageView.image = [UIImage imageNamed:@"mk_return_goods_alert_arrow"];
 	[self.contentView addSubview:self.arrowImageView];
 	
 	[self addMasnory];
@@ -57,8 +59,6 @@
 	SJLeftTitleRightArrowCellModel *arrowModel = cellModel;
 	
 	self.leftLabel.text = arrowModel.leftTitle;
-	
-	self.arrowImageView.image = [UIImage imageNamed:arrowModel.arrowLocalPath];
 }
 
 @end

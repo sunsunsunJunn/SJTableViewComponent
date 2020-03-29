@@ -21,6 +21,7 @@
 
 - (instancetype)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString *)reuseIdentifier {
 	if (self = [super initWithStyle:style reuseIdentifier:reuseIdentifier]) {
+    self.selectionStyle = UITableViewCellSelectionStyleNone;
 		[self configureSubViews];
 	}
 	return self;
@@ -38,6 +39,7 @@
 	[self.contentView addSubview:self.avartarImageView];
 	
 	self.arrowImageView = [[UIImageView alloc] init];
+  self.arrowImageView.image = [UIImage imageNamed:@"mk_return_goods_alert_arrow"];
 	[self.contentView addSubview:self.arrowImageView];
 	
 	[self addMasnory];
@@ -70,9 +72,7 @@
 	
 	self.avartarLabel.text = avartarModel.leftTitle;
 	
-	[self.avartarImageView sd_setImageWithURL:[NSURL URLWithString:avartarModel.avartarURL]];
-	
-	self.arrowImageView.image = [UIImage imageNamed:avartarModel.arrowLocalPath];
+	[self.avartarImageView sd_setImageWithURL:[NSURL URLWithString:avartarModel.avartarURL]];	
 }
 
 @end
