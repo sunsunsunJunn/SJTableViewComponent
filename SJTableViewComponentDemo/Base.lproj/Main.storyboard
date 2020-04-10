@@ -27,10 +27,24 @@
                                     <action selector="case1ButtonClicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="dWI-Qt-ijc"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CNC-jl-Kuh">
+                                <rect key="frame" x="107" y="253" width="200" height="39"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="39" id="Gku-7R-KGU"/>
+                                    <constraint firstAttribute="width" constant="200" id="jWo-wq-cjP"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                                <state key="normal" title="MVVM使用案例"/>
+                                <connections>
+                                    <action selector="mvvmCaseButtonClicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="hh2-Iz-6JT"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="gy6-4Y-9tf" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="0tL-pe-ebz"/>
+                            <constraint firstItem="CNC-jl-Kuh" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="5P9-IF-aUh"/>
+                            <constraint firstItem="CNC-jl-Kuh" firstAttribute="top" secondItem="gy6-4Y-9tf" secondAttribute="bottom" constant="84" id="9zA-L7-BVY"/>
                             <constraint firstItem="gy6-4Y-9tf" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="124" id="nW0-l3-Ymu"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>

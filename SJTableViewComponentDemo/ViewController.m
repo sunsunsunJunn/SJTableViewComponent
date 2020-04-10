@@ -8,6 +8,7 @@
 
 #import "ViewController.h"
 #import "SJTableViewController.h"
+#import "SJFeedListViewController.h"
 
 @interface ViewController ()
 
@@ -26,6 +27,11 @@
 - (IBAction)case1ButtonClicked:(id)sender {
 	SJTableViewController *tableViewController = [[SJTableViewController alloc] init];
 	[self.navigationController pushViewController:tableViewController animated:YES];
+}
+
+- (IBAction)mvvmCaseButtonClicked:(id)sender {
+  SJFeedListViewController *feedList = [[SJFeedListViewController alloc] init];
+  [self.navigationController pushViewController:feedList animated:YES];
 }
 
 @end
