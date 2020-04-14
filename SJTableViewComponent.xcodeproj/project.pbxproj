@@ -43,8 +43,8 @@
 		04CAE3C224401F840097BFEC /* SJFeedImageCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 04CAE3C024401F840097BFEC /* SJFeedImageCell.xib */; };
 		04CAE3CC24401FEF0097BFEC /* SJFeedImageCellModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 04CAE3CB24401FEF0097BFEC /* SJFeedImageCellModel.m */; };
 		04CAE3CF24401FFA0097BFEC /* SJFeedTextCellModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 04CAE3CE24401FFA0097BFEC /* SJFeedTextCellModel.m */; };
-		04CAE3D22440200D0097BFEC /* SJFeedViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 04CAE3D12440200D0097BFEC /* SJFeedViewModel.m */; };
-		04CAE3D5244021270097BFEC /* SJFeedViewModel+LogicFlow.m in Sources */ = {isa = PBXBuildFile; fileRef = 04CAE3D4244021270097BFEC /* SJFeedViewModel+LogicFlow.m */; };
+		04CAE3D9244550230097BFEC /* SJFeedListViewController+LogicFlow.m in Sources */ = {isa = PBXBuildFile; fileRef = 04CAE3D8244550230097BFEC /* SJFeedListViewController+LogicFlow.m */; };
+		04CAE3DC244550BE0097BFEC /* SJFeedListViewController+CellModelAdapter.m in Sources */ = {isa = PBXBuildFile; fileRef = 04CAE3DB244550BE0097BFEC /* SJFeedListViewController+CellModelAdapter.m */; };
 		325B31528E5FE820D8979D79 /* Pods_SJTableViewComponent.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 750788471ACE6D60FD40D62E /* Pods_SJTableViewComponent.framework */; };
 /* End PBXBuildFile section */
 
@@ -140,10 +140,10 @@
 		04CAE3CB24401FEF0097BFEC /* SJFeedImageCellModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SJFeedImageCellModel.m; sourceTree = "<group>"; };
 		04CAE3CD24401FFA0097BFEC /* SJFeedTextCellModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SJFeedTextCellModel.h; sourceTree = "<group>"; };
 		04CAE3CE24401FFA0097BFEC /* SJFeedTextCellModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SJFeedTextCellModel.m; sourceTree = "<group>"; };
-		04CAE3D02440200D0097BFEC /* SJFeedViewModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SJFeedViewModel.h; sourceTree = "<group>"; };
-		04CAE3D12440200D0097BFEC /* SJFeedViewModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SJFeedViewModel.m; sourceTree = "<group>"; };
-		04CAE3D3244021270097BFEC /* SJFeedViewModel+LogicFlow.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "SJFeedViewModel+LogicFlow.h"; sourceTree = "<group>"; };
-		04CAE3D4244021270097BFEC /* SJFeedViewModel+LogicFlow.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "SJFeedViewModel+LogicFlow.m"; sourceTree = "<group>"; };
+		04CAE3D7244550230097BFEC /* SJFeedListViewController+LogicFlow.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "SJFeedListViewController+LogicFlow.h"; sourceTree = "<group>"; };
+		04CAE3D8244550230097BFEC /* SJFeedListViewController+LogicFlow.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "SJFeedListViewController+LogicFlow.m"; sourceTree = "<group>"; };
+		04CAE3DA244550BE0097BFEC /* SJFeedListViewController+CellModelAdapter.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "SJFeedListViewController+CellModelAdapter.h"; sourceTree = "<group>"; };
+		04CAE3DB244550BE0097BFEC /* SJFeedListViewController+CellModelAdapter.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "SJFeedListViewController+CellModelAdapter.m"; sourceTree = "<group>"; };
 		45706CE49F29351E72BC631B /* Pods-SJTableViewComponent.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SJTableViewComponent.debug.xcconfig"; path = "Target Support Files/Pods-SJTableViewComponent/Pods-SJTableViewComponent.debug.xcconfig"; sourceTree = "<group>"; };
 		750788471ACE6D60FD40D62E /* Pods_SJTableViewComponent.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SJTableViewComponent.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		CD59C8393F4BD032BCAB54B3 /* Pods-SJTableViewComponent.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SJTableViewComponent.release.xcconfig"; path = "Target Support Files/Pods-SJTableViewComponent/Pods-SJTableViewComponent.release.xcconfig"; sourceTree = "<group>"; };
@@ -219,7 +219,7 @@
 			isa = PBXGroup;
 			children = (
 				042CB0F423920BEE001F5149 /* SJTableViewComponent */,
-				04CAE3A924401B700097BFEC /* MVVM架构案例 */,
+				04CAE3A924401B700097BFEC /* MVCS架构案例 */,
 				042CB10823920BEE001F5149 /* 使用案例1 */,
 				042CB0F323920BEE001F5149 /* AppDelegate.h */,
 				042CB12323920BEE001F5149 /* AppDelegate.m */,
@@ -346,38 +346,29 @@
 			path = Model;
 			sourceTree = "<group>";
 		};
-		04CAE3A924401B700097BFEC /* MVVM架构案例 */ = {
+		04CAE3A924401B700097BFEC /* MVCS架构案例 */ = {
 			isa = PBXGroup;
 			children = (
 				04CAE3AD24401C120097BFEC /* SJFeedListViewController.h */,
 				04CAE3AE24401C120097BFEC /* SJFeedListViewController.m */,
 				04CAE3B024401C3C0097BFEC /* SJFeedListViewController+Configure.h */,
 				04CAE3B124401C3C0097BFEC /* SJFeedListViewController+Configure.m */,
-				04CAE3AA24401B700097BFEC /* ViewModel */,
+				04CAE3D7244550230097BFEC /* SJFeedListViewController+LogicFlow.h */,
+				04CAE3D8244550230097BFEC /* SJFeedListViewController+LogicFlow.m */,
+				04CAE3DA244550BE0097BFEC /* SJFeedListViewController+CellModelAdapter.h */,
+				04CAE3DB244550BE0097BFEC /* SJFeedListViewController+CellModelAdapter.m */,
 				04CAE3AB24401B700097BFEC /* Model */,
 				04CAE3AC24401B700097BFEC /* View */,
 			);
-			path = "MVVM架构案例";
-			sourceTree = "<group>";
-		};
-		04CAE3AA24401B700097BFEC /* ViewModel */ = {
-			isa = PBXGroup;
-			children = (
-				04CAE3D02440200D0097BFEC /* SJFeedViewModel.h */,
-				04CAE3D12440200D0097BFEC /* SJFeedViewModel.m */,
-				04CAE3D3244021270097BFEC /* SJFeedViewModel+LogicFlow.h */,
-				04CAE3D4244021270097BFEC /* SJFeedViewModel+LogicFlow.m */,
-				04CAE3C624401FB30097BFEC /* Image Cell Model */,
-				04CAE3C524401FA80097BFEC /* Text Cell Model */,
-			);
-			path = ViewModel;
+			path = "MVCS架构案例";
 			sourceTree = "<group>";
 		};
 		04CAE3AB24401B700097BFEC /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				04CAE3B324401C550097BFEC /* SJFeedModel.h */,
-				04CAE3B424401C550097BFEC /* SJFeedModel.m */,
+				04CAE3D6244550040097BFEC /* FeedModel */,
+				04CAE3C624401FB30097BFEC /* Image Cell Model */,
+				04CAE3C524401FA80097BFEC /* Text Cell Model */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -427,6 +418,15 @@
 				04CAE3CB24401FEF0097BFEC /* SJFeedImageCellModel.m */,
 			);
 			path = "Image Cell Model";
+			sourceTree = "<group>";
+		};
+		04CAE3D6244550040097BFEC /* FeedModel */ = {
+			isa = PBXGroup;
+			children = (
+				04CAE3B324401C550097BFEC /* SJFeedModel.h */,
+				04CAE3B424401C550097BFEC /* SJFeedModel.m */,
+			);
+			path = FeedModel;
 			sourceTree = "<group>";
 		};
 		3A8BC165B4B73AE66BBD6412 /* Pods */ = {
@@ -631,17 +631,17 @@
 				04489C8524285A350007BAAC /* SJTableViewPlaceholderHeaderFooterModel.m in Sources */,
 				04CAE3BC24401F630097BFEC /* SJFeedTextCell.m in Sources */,
 				048A6CEC2430E23F00E499D0 /* SJTableViewViewModel.m in Sources */,
-				04CAE3D5244021270097BFEC /* SJFeedViewModel+LogicFlow.m in Sources */,
 				048A6CF02430E2E100E499D0 /* SJMineModel.m in Sources */,
 				042CB13023920BEE001F5149 /* SJSectionHeaderViewModel.m in Sources */,
 				042CB13623920BEE001F5149 /* SJLeftTitleRightTitleCell.m in Sources */,
+				04CAE3D9244550230097BFEC /* SJFeedListViewController+LogicFlow.m in Sources */,
 				042CB13923920BEE001F5149 /* main.m in Sources */,
 				042CB13723920BEE001F5149 /* SJLeftTitleRightArrowCell.m in Sources */,
+				04CAE3DC244550BE0097BFEC /* SJFeedListViewController+CellModelAdapter.m in Sources */,
 				04CAE3CF24401FFA0097BFEC /* SJFeedTextCellModel.m in Sources */,
 				042CB12723920BEE001F5149 /* SJTableViewImplement.m in Sources */,
 				042CB12F23920BEE001F5149 /* SJAvartarCellModel.m in Sources */,
 				04CAE3AF24401C120097BFEC /* SJFeedListViewController.m in Sources */,
-				04CAE3D22440200D0097BFEC /* SJFeedViewModel.m in Sources */,
 				042CB12B23920BEE001F5149 /* ViewController.m in Sources */,
 				042CB12923920BEE001F5149 /* UITableView+SJComponent.m in Sources */,
 				042CB13123920BEE001F5149 /* SJLeftTitleRightArrowCellModel.m in Sources */,

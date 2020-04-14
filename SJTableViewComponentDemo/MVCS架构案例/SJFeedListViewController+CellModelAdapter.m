@@ -1,33 +1,14 @@
 //
-//  SJFeedViewModel.m
+//  SJFeedListViewController+CellModelAdapter.m
 //  SJTableViewComponent
 //
-//  Created by SUNJUN on 2020/4/10.
+//  Created by SUNJUN on 2020/4/14.
 //  Copyright © 2020 SUNJUN. All rights reserved.
 //
 
-#import "SJFeedViewModel.h"
-#import "SJFeedViewModel+LogicFlow.h"
+#import "SJFeedListViewController+CellModelAdapter.h"
 
-@interface SJFeedViewModel ()
-
-@property (nonatomic, strong) NSMutableArray *cellModels;
-@property (nonatomic, strong) NSMutableArray *feedModels;
-
-@end
-
-@implementation SJFeedViewModel
-
-- (instancetype)initWithFeedListDatas:(NSArray *)feedListDatas {
-  if (self = [super init]) {
-    self.currentCount = feedListDatas.count;
-    [self.feedModels addObjectsFromArray:[self feedModelsWithFeedListDatas:feedListDatas]];
-    [self.cellModels addObjectsFromArray:[self cellModelsWithFeedModels:self.feedModels]];
-  }
-  return self;
-}
-
-#pragma mark - Private Methods
+@implementation SJFeedListViewController (CellModelAdapter)
 
 - (NSArray<id<SJTableViewCellModelProtocol>> *)feedModelsWithFeedListDatas:(NSArray *)feedListDatas {
   NSMutableArray *feedModels = [NSMutableArray array];
@@ -58,24 +39,26 @@
 - (id<SJTableViewCellModelProtocol>)cellModelWithFeedModel:(SJFeedModel *)feedModel {
   id<SJTableViewCellModelProtocol> cellModel;
   if (feedModel.feedImageURL.length) {
-    SJFeedImageCellModel *imageCellModel = [[SJFeedImageCellModel alloc] initWithFeedModel:feedModel];
+    SJFeedImageCellModel *imageCellModel = [[SJFeedImageCellModel alloc] init];
+    imageCellModel.feedModel = feedModel;
     imageCellModel.sj_cellHeight = 140;
     __weak typeof(self) wSelf = self;
     imageCellModel.detailButtonClickBlock = ^(SJFeedImageCellModel * _Nonnull cellModel) {
       __strong typeof(wSelf) self = wSelf;
-      !self.detailButtonClickCallback ?: self.detailButtonClickCallback(cellModel);
+      [self detailButtonClickedInCellModel:cellModel];
     };
     imageCellModel.deleteButtonClickBlock = ^(SJFeedImageCellModel * _Nonnull cellModel) {
       __strong typeof(wSelf) self = wSelf;
-      !self.deleteButtonClickCallback ?: self.deleteButtonClickCallback(cellModel);
+      [self deleteButtonClickedInCellModel:cellModel];
     };
     
     cellModel = imageCellModel;
     
   } else {
-    SJFeedTextCellModel *textCellModel = [[SJFeedTextCellModel alloc] initWithFeedModel:feedModel];
+    SJFeedTextCellModel *textCellModel = [[SJFeedTextCellModel alloc] init];
+    textCellModel.feedModel = feedModel;
     textCellModel.sj_cellHeight = UITableViewAutomaticDimension;
-    
+
     cellModel = textCellModel;
   }
   
@@ -85,22 +68,6 @@
 - (void)deleteCellModel:(id<SJTableViewCellModelProtocol>)cellModel {
   [self.cellModels removeObject:cellModel];
   self.currentCount = self.cellModels.count;
-}
-
-#pragma mark - Setter Getter
-
-- (NSMutableArray *)cellModels {
-  if (!_cellModels) {
-    _cellModels = [NSMutableArray array];
-  }
-  return _cellModels;
-}
-
-- (NSMutableArray *)feedModels {
-  if (!_feedModels) {
-    _feedModels = [NSMutableArray array];
-  }
-  return _feedModels;
 }
 
 @end

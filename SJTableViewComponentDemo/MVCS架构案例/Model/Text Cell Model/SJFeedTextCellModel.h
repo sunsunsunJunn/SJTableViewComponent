@@ -11,15 +11,9 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-// 原始数据转化为cell需要数据的处理
 @interface SJFeedTextCellModel : NSObject <SJTableViewCellModelProtocol>
 
 @property (nonatomic, strong) SJFeedModel *feedModel;
-
-@property (nonatomic, copy, readonly) NSString *titleText;
-@property (nonatomic, copy, readonly) NSString *descText;
-
-- (instancetype)initWithFeedModel:(SJFeedModel *)feedModel;
 
 @end
 

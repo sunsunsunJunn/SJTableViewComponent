@@ -11,18 +11,12 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-// 原始数据转化为cell需要数据的处理
 @interface SJFeedImageCellModel : NSObject <SJTableViewCellModelProtocol>
 
 @property (nonatomic, strong) SJFeedModel *feedModel;
 
-@property (nonatomic, copy, readonly) NSString *titleText;
-@property (nonatomic, copy, readonly) NSString *descText;
-@property (nonatomic, copy, readonly) NSString *feedImageURL;
 @property (nonatomic, copy) void (^detailButtonClickBlock)(SJFeedImageCellModel *cellModel);
 @property (nonatomic, copy) void (^deleteButtonClickBlock)(SJFeedImageCellModel *cellModel);
-
-- (instancetype)initWithFeedModel:(SJFeedModel *)feedModel;
 
 @end
 

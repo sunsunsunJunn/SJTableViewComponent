@@ -1,25 +1,28 @@
 //
-//  SJFeedViewModel+LogicFlow.m
+//  SJFeedListViewController+LogicFlow.m
 //  SJTableViewComponent
 //
-//  Created by SUNJUN on 2020/4/10.
+//  Created by SUNJUN on 2020/4/14.
 //  Copyright © 2020 SUNJUN. All rights reserved.
 //
 
-#import "SJFeedViewModel+LogicFlow.h"
+#import "SJFeedListViewController+LogicFlow.h"
+#import "SJFeedListViewController+CellModelAdapter.h"
 
-@implementation SJFeedViewModel (LogicFlow)
+@implementation SJFeedListViewController (LogicFlow)
 
-- (void)loadFeedListCompletion:(void(^)(NSString *errorMsg))completion {
+- (void)loadFeedList {
   dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_LOW, 0.5), ^{
     dispatch_async(dispatch_get_main_queue(), ^{
       NSString *errorMsg = @"";
-      
-      if (!errorMsg.length) {
+      if (errorMsg.length) {
+        //toast
+      } else {
         [self handleResponseData:self.responseData];
       }
       
-      !completion ?: completion(errorMsg);
+      [self stopRefresh];
+      [self reloadData];
     });
   });
 }
@@ -27,13 +30,11 @@
 - (void)handleResponseData:(NSDictionary *)responseData {
   if (self.currentCount == 0) {
     [self.cellModels removeAllObjects];
-    [self.feedModels removeAllObjects];
   }
   
   NSArray *feedList = self.responseData[@"feedList"];
   for (NSDictionary *feedDictionary in feedList) {
     SJFeedModel *feedModel = [self feedModelWithFeedDictionay:feedDictionary];
-    [self.feedModels addObject:feedModel];
     [self.cellModels addObject:[self cellModelWithFeedModel:feedModel]];
   }
   

@@ -7,14 +7,17 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "SJFeedViewModel.h"
-#import "SJFeedViewModel+LogicFlow.h"
+#import "SJFeedTextCellModel.h"
+#import "SJFeedImageCellModel.h"
 
 NS_ASSUME_NONNULL_BEGIN
 
 @interface SJFeedListViewController : UIViewController
 
-@property (nonatomic, strong) SJFeedViewModel *viewModel;
+@property (nonatomic, assign) NSInteger currentCount;
+@property (nonatomic, assign) BOOL isLastPage;
+@property (nonatomic, strong) NSMutableArray *cellModels;
+
 @property (nonatomic, strong) UITableView *tableView;
 
 - (void)loadNewData;

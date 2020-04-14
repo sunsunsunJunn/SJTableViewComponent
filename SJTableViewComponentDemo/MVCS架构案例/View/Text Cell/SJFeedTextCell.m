@@ -34,9 +34,9 @@
 #pragma mark - Private Methods
 
 - (void)reloadData {
-  self.titleLabel.text = self.textCellModel.titleText;
+  self.titleLabel.text = self.textCellModel.feedModel.title;
   
-  self.descLabel.text = self.textCellModel.descText;
+  self.descLabel.text = self.textCellModel.feedModel.content;
 }
 
 @end

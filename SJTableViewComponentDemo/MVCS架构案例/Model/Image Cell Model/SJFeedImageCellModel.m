@@ -21,16 +21,6 @@
 
 @synthesize sj_cellHeight = _sj_cellHeight;
 
-- (instancetype)initWithFeedModel:(SJFeedModel *)feedModel {
-  if (self = [super init]) {
-    self.feedModel = feedModel;
-    self.titleText = [NSString stringWithFormat:@"标题：%@",self.feedModel.title];
-    self.descText = [NSString stringWithFormat:@"内容：%@",self.feedModel.content];
-    self.feedImageURL = self.feedModel.feedImageURL;
-  }
-  return self;
-}
-
 #pragma mark - SJTableViewCellModelProtocol
 
 - (Class<SJTableViewCellProtocol>)sj_cellClass {

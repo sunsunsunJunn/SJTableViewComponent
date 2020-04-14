@@ -46,11 +46,11 @@
 #pragma mark - Private Methods
 
 - (void)reloadData {
-  [self.feedImageView sd_setImageWithURL:[NSURL URLWithString:self.imageCellModel.feedImageURL]];
+  [self.feedImageView sd_setImageWithURL:[NSURL URLWithString:self.imageCellModel.feedModel.feedImageURL]];
 
-  self.titleLabel.text = self.imageCellModel.titleText;
+  self.titleLabel.text = self.imageCellModel.feedModel.title;
   
-  self.descLabel.text = self.imageCellModel.descText;
+  self.descLabel.text = self.imageCellModel.feedModel.content;
 }
 
 @end

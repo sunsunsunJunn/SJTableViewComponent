@@ -34,7 +34,7 @@
                                     <constraint firstAttribute="width" constant="200" id="jWo-wq-cjP"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="22"/>
-                                <state key="normal" title="MVVM使用案例"/>
+                                <state key="normal" title="MVCS使用案例"/>
                                 <connections>
                                     <action selector="mvvmCaseButtonClicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="hh2-Iz-6JT"/>
                                 </connections>

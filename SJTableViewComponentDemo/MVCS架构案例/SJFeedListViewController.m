@@ -8,6 +8,8 @@
 
 #import "SJFeedListViewController.h"
 #import "SJFeedListViewController+Configure.h"
+#import "SJFeedListViewController+LogicFlow.h"
+#import "SJFeedListViewController+CellModelAdapter.h"
 #import <MJRefresh/MJRefresh.h>
 #import "SJTableViewController.h"
 
@@ -23,13 +25,13 @@
   [super viewDidLoad];
   [self initProperties];
   [self configureViews];
+  [self loadFeedList];
 }
 
 #pragma mark - Action Methods
 
 - (void)didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
-  SJFeedModel *feedModel = self.viewModel.feedModels[indexPath.row];
-  NSLog(@"name%@",feedModel.title);
+  NSLog(@"%ld", (long)indexPath.row);
 }
 
 - (void)detailButtonClickedInCellModel:(SJFeedImageCellModel *)cellModel {
@@ -42,7 +44,7 @@
 - (void)deleteButtonClickedInCellModel:(SJFeedImageCellModel *)cellModel {
   UIAlertController *alert = [UIAlertController alertControllerWithTitle:@"提示" message:@"确定删除吗？" preferredStyle:UIAlertControllerStyleAlert];
   [alert addAction:[UIAlertAction actionWithTitle:@"确定" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
-    [self.viewModel deleteCellModel:cellModel];
+    [self deleteCellModel:cellModel];
     [self reloadData];
   }]];
   [alert addAction:[UIAlertAction actionWithTitle:@"取消" style:UIAlertActionStyleCancel handler:^(UIAlertAction * _Nonnull action) {
@@ -54,12 +56,12 @@
 #pragma mark - Public Methods
 
 - (void)loadNewData {
-  self.viewModel.currentCount = 0;
-  [self loadFeedListData];
+  self.currentCount = 0;
+  [self loadFeedList];
 }
 
 - (void)loadMoreData {
-  [self loadFeedListData];
+  [self loadFeedList];
 }
 
 - (void)reloadData {
@@ -71,20 +73,9 @@
   [self.tableView.mj_footer endRefreshing];
   self.tableView.mj_footer.hidden = NO;
   
-  if (self.viewModel.isLastPage) {
+  if (self.isLastPage) {
     [self.tableView.mj_footer endRefreshingWithNoMoreData];
   }
-}
-
-- (void)loadFeedListData {
-  [self.viewModel loadFeedListCompletion:^(NSString * _Nonnull errorMsg) {
-    if (errorMsg.length) {
-      // toast
-    }
-    
-    [self stopRefresh];
-    [self reloadData];
-  }];
 }
 
 @end
