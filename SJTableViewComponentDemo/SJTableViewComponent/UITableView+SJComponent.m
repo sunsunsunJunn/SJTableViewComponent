@@ -58,10 +58,6 @@
 	return [self.sj_tableViewImplement indexPathForCellModel:cellModel];
 }
 
-- (void)sj_cleanCellHeightInCellModel:(id<SJTableViewCellModelProtocol>)cellModel {
-	cellModel.sj_cellHeight = 0;
-}
-
 #pragma mark - Setter Getter
 
 - (void)setSj_sectionArray:(NSMutableArray<SJTableViewSection *> *)sj_sectionArray {
@@ -90,12 +86,19 @@
 		}
 	};
 	
-  sj_tableViewImplement.willConfigureCellAtIndexPathBlock = ^(UITableViewCell * _Nonnull cell, NSIndexPath * _Nonnull indexPath) {
+  sj_tableViewImplement.cellForRowAtIndexPathBlock = ^(UITableViewCell * _Nonnull cell, NSIndexPath * _Nonnull indexPath) {
 		__strong typeof(wSelf) self = wSelf;
-		if (self.sj_willConfigureCellAtIndexPathBlock) {
-			self.sj_willConfigureCellAtIndexPathBlock(cell, indexPath);
+		if (self.sj_cellForRowAtIndexPathBlock) {
+			self.sj_cellForRowAtIndexPathBlock(cell, indexPath);
 		}
 	};
+  
+  sj_tableViewImplement.scrollViewDidScrollBlock = ^(UIScrollView * _Nonnull scrollView) {
+    __strong typeof(wSelf) self = wSelf;
+    if (self.sj_scrollViewDidScrollBlock) {
+      self.sj_scrollViewDidScrollBlock(scrollView);
+    }
+  };
 	
   self.delegate = sj_tableViewImplement;
 	self.dataSource = sj_tableViewImplement;
@@ -113,20 +116,28 @@
 	return sj_tableViewImplement;
 }
 
-- (void)setSj_willConfigureCellAtIndexPathBlock:(void (^)(UITableViewCell * _Nonnull, NSIndexPath * _Nonnull))sj_willConfigureCellAtIndexPathBlock {
-	objc_setAssociatedObject(self, @selector(sj_willConfigureCellAtIndexPathBlock), sj_willConfigureCellAtIndexPathBlock, OBJC_ASSOCIATION_COPY_NONATOMIC);
+- (void)setSj_cellForRowAtIndexPathBlock:(void (^)(UITableViewCell * _Nonnull, NSIndexPath * _Nonnull))sj_cellForRowAtIndexPathBlock {
+	objc_setAssociatedObject(self, @selector(sj_cellForRowAtIndexPathBlock), sj_cellForRowAtIndexPathBlock, OBJC_ASSOCIATION_COPY_NONATOMIC);
 }
 
-- (void (^)(UITableViewCell * _Nonnull, NSIndexPath * _Nonnull))sj_willConfigureCellAtIndexPathBlock {
+- (void (^)(UITableViewCell * _Nonnull, NSIndexPath * _Nonnull))sj_cellForRowAtIndexPathBlock {
 	return objc_getAssociatedObject(self, _cmd);
 }
 
-- (void)setSj_didSelectRowAtIndexPathBlock:(void (^)(UITableView * _Nonnull, NSIndexPath * _Nonnull))sj_didSelectRowAtIndexPathBlock{
+- (void)setSj_didSelectRowAtIndexPathBlock:(void (^)(UITableView * _Nonnull, NSIndexPath * _Nonnull))sj_didSelectRowAtIndexPathBlock {
 	objc_setAssociatedObject(self, @selector(sj_didSelectRowAtIndexPathBlock), sj_didSelectRowAtIndexPathBlock, OBJC_ASSOCIATION_COPY_NONATOMIC);
 }
 
 - (void (^)(UITableView * _Nonnull, NSIndexPath * _Nonnull))sj_didSelectRowAtIndexPathBlock {
 	return objc_getAssociatedObject(self, _cmd);
+}
+
+- (void)setSj_scrollViewDidScrollBlock:(void (^)(UIScrollView * _Nonnull))sj_scrollViewDidScrollBlock {
+  objc_setAssociatedObject(self, @selector(sj_scrollViewDidScrollBlock), sj_scrollViewDidScrollBlock, OBJC_ASSOCIATION_COPY_NONATOMIC);
+}
+
+- (void (^)(UIScrollView * _Nonnull))sj_scrollViewDidScrollBlock {
+  return objc_getAssociatedObject(self, _cmd);
 }
 
 @end

@@ -74,12 +74,13 @@
       case SJMineModelTypeLeftTitleRightCopy: {
         SJLeftTitleRightCopyCellModel *copy = [[SJLeftTitleRightCopyCellModel alloc] init];
         copy.leftTitle = mineModel.leftTitle;
+        copy.sj_cellHeight = UITableViewAutomaticDimension;
         __weak typeof(self) wSelf = self;
         copy.copyButtonClickedBlock = ^(SJLeftTitleRightCopyCellModel * _Nonnull cellModel) {
           NSLog(@"点击了放大文字");
           __strong typeof(wSelf) self = wSelf;
           //cell高度变化 需要清除高度缓存 重新计算
-          [self.tableView sj_cleanCellHeightInCellModel:cellModel];
+          cellModel.sj_cellHeight = UITableViewAutomaticDimension;
           cellModel.isExpanded = !cellModel.isExpanded;
           [self.tableView reloadRowsAtIndexPaths:@[[self.tableView sj_indexPathForCellModel:cellModel]] withRowAnimation:UITableViewRowAnimationFade];
         };

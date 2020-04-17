@@ -29,17 +29,18 @@
 
 - (void)handleResponseData:(NSDictionary *)responseData {
   if (self.currentCount == 0) {
-    [self.cellModels removeAllObjects];
+    [self.tableView.sj_oneSectionRowArray removeAllObjects];
   }
   
   NSArray *feedList = self.responseData[@"feedList"];
   for (NSDictionary *feedDictionary in feedList) {
-    SJFeedModel *feedModel = [self feedModelWithFeedDictionay:feedDictionary];
-    [self.cellModels addObject:[self cellModelWithFeedModel:feedModel]];
+    SJFeedModel *feedModel = [[SJFeedModel alloc] init];
+    [feedModel updateWithResponseData:feedDictionary];
+    [self.tableView.sj_oneSectionRowArray addObject:[self cellModelWithFeedModel:feedModel]];
   }
-  
-  self.currentCount = self.cellModels.count;
-  self.isLastPage = self.cellModels.count > 20;
+    
+  self.currentCount = self.tableView.sj_sectionArray.count;
+  self.isLastPage = self.tableView.sj_sectionArray.count > 20;
 }
 
 #pragma mark - 模拟数据

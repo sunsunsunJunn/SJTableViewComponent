@@ -35,12 +35,17 @@ NS_ASSUME_NONNULL_BEGIN
 /**
  * tableView将要配置cell的回调(可在此设置一些cell的其他属性)
  */
-@property (nonatomic, copy) void(^willConfigureCellAtIndexPathBlock)(UITableViewCell *cell, NSIndexPath *indexPath);
+@property (nonatomic, copy) void(^cellForRowAtIndexPathBlock)(UITableViewCell *cell, NSIndexPath *indexPath);
 
 /**
  * tableView 点击的回调每一个cell的回调
  */
 @property (nonatomic, copy) void(^didSelectRowAtIndexPathBlock)(UITableView *tableView, NSIndexPath *indexPath);
+
+/**
+ * tableView 滚动的回调
+ */
+@property (nonatomic, copy) void(^scrollViewDidScrollBlock)(UIScrollView *scrollView);
 
 @end
 

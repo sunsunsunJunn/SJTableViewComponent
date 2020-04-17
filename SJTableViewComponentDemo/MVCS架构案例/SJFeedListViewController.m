@@ -28,10 +28,16 @@
   [self loadFeedList];
 }
 
+- (void)dealloc {
+  NSLog(@"%@ dealloc", [self class]);
+}
+
 #pragma mark - Action Methods
 
 - (void)didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
   NSLog(@"%ld", (long)indexPath.row);
+  id<SJTableViewCellModelProtocol> cellModel = [self.tableView sj_cellModelForIndexPath:indexPath];
+  NSLog(@"%@",NSStringFromClass(cellModel.sj_cellClass));
 }
 
 - (void)detailButtonClickedInCellModel:(SJFeedImageCellModel *)cellModel {

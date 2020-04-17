@@ -16,7 +16,6 @@ NS_ASSUME_NONNULL_BEGIN
 
 @property (nonatomic, assign) NSInteger currentCount;
 @property (nonatomic, assign) BOOL isLastPage;
-@property (nonatomic, strong) NSMutableArray *cellModels;
 
 @property (nonatomic, strong) UITableView *tableView;
 

@@ -12,7 +12,6 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface SJFeedListViewController (CellModelAdapter)
 
-- (SJFeedModel *)feedModelWithFeedDictionay:(NSDictionary *)feedDictionay;
 - (id<SJTableViewCellModelProtocol>)cellModelWithFeedModel:(SJFeedModel *)feedModel;
 
 - (void)deleteCellModel:(id<SJTableViewCellModelProtocol>)cellModel;

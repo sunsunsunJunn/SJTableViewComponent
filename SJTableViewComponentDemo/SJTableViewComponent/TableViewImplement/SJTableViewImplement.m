@@ -84,8 +84,8 @@
   
   UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:cellIdentifier forIndexPath:indexPath];
   
-  if (self.willConfigureCellAtIndexPathBlock) {
-    self.willConfigureCellAtIndexPathBlock(cell, indexPath);
+  if (self.cellForRowAtIndexPathBlock) {
+    self.cellForRowAtIndexPathBlock(cell, indexPath);
   }
   
   if ([cell conformsToProtocol:@protocol(SJTableViewCellProtocol)]) {
@@ -169,6 +169,14 @@
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
   if (self.didSelectRowAtIndexPathBlock) {
     self.didSelectRowAtIndexPathBlock(tableView, indexPath);
+  }
+}
+
+#pragma mark - UIScrollViewDelegate
+
+- (void)scrollViewDidScroll:(UIScrollView *)scrollView {
+  if (self.scrollViewDidScrollBlock) {
+    self.scrollViewDidScrollBlock(scrollView);
   }
 }
 

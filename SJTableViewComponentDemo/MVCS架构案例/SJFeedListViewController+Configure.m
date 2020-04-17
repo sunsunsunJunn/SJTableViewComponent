@@ -12,7 +12,7 @@
 @implementation SJFeedListViewController (Configure)
 
 - (void)initProperties {
-  self.cellModels = [NSMutableArray array];
+  
 }
 
 - (void)configureViews {
@@ -27,11 +27,14 @@
   self.tableView.mj_header = [MJRefreshNormalHeader headerWithRefreshingTarget:self refreshingAction:@selector(loadNewData)];
   self.tableView.mj_footer = [MJRefreshAutoNormalFooter footerWithRefreshingTarget:self refreshingAction:@selector(loadMoreData)];
   
-  self.tableView.sj_oneSectionRowArray = self.cellModels;
   __weak typeof(self) wSelf = self;
   self.tableView.sj_didSelectRowAtIndexPathBlock = ^(UITableView * _Nonnull tableView, NSIndexPath * _Nonnull indexPath) {
     __strong typeof(wSelf) self = wSelf;
     [self didSelectRowAtIndexPath:indexPath];
+  };
+  
+  self.tableView.sj_scrollViewDidScrollBlock = ^(UIScrollView * _Nonnull scrollView) {
+    NSLog(@"y:%f",scrollView.contentOffset.y);
   };
 }
 

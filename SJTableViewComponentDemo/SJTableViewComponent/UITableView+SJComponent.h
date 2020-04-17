@@ -39,20 +39,22 @@ NS_ASSUME_NONNULL_BEGIN
 /** 获取cellModel 对应的indexPath */
 - (NSIndexPath *)sj_indexPathForCellModel:(id<SJTableViewCellModelProtocol>)cellModel;
 
-/** 清除cellmodel对应的cell的高度缓存 */
-- (void)sj_cleanCellHeightInCellModel:(id<SJTableViewCellModelProtocol>)cellModel;
-
 #pragma mark - tableView的一些回调处理
 
 /**
  * tableView将要配置cell的回调(可在此设置一些cell的其他属性)
  */
-@property (nonatomic, copy) void(^sj_willConfigureCellAtIndexPathBlock)(UITableViewCell *cell, NSIndexPath *indexPath);
+@property (nonatomic, copy) void(^sj_cellForRowAtIndexPathBlock)(UITableViewCell *cell, NSIndexPath *indexPath);
 
 /**
  * tableView 点击的回调每一个cell的回调
  */
 @property (nonatomic, copy) void(^sj_didSelectRowAtIndexPathBlock)(UITableView *tableView, NSIndexPath *indexPath);
+
+/**
+ * tableView 滚动的回调
+ */
+@property (nonatomic, copy) void(^sj_scrollViewDidScrollBlock)(UIScrollView *scrollView);
 
 @end
 

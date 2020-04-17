@@ -13,7 +13,8 @@
 - (NSArray<id<SJTableViewCellModelProtocol>> *)feedModelsWithFeedListDatas:(NSArray *)feedListDatas {
   NSMutableArray *feedModels = [NSMutableArray array];
   for (NSDictionary *feedDictionary in feedListDatas) {
-    SJFeedModel *feedModel = [self feedModelWithFeedDictionay:feedDictionary];
+    SJFeedModel *feedModel = [[SJFeedModel alloc] init];
+    [feedModel updateWithResponseData:feedDictionary];
     [feedModels addObject:feedModel];
   }
 
@@ -28,12 +29,6 @@
   }
   
   return cellModels;
-}
-
-- (SJFeedModel *)feedModelWithFeedDictionay:(NSDictionary *)feedDictionay  {
-  SJFeedModel *feedModel = [[SJFeedModel alloc] init];
-  [feedModel updateWithResponseData:feedDictionay];
-  return feedModel;
 }
 
 - (id<SJTableViewCellModelProtocol>)cellModelWithFeedModel:(SJFeedModel *)feedModel {
@@ -66,8 +61,8 @@
 }
 
 - (void)deleteCellModel:(id<SJTableViewCellModelProtocol>)cellModel {
-  [self.cellModels removeObject:cellModel];
-  self.currentCount = self.cellModels.count;
+  [self.tableView.sj_oneSectionRowArray removeObject:cellModel];
+  self.currentCount = self.tableView.sj_oneSectionRowArray.count;
 }
 
 @end
