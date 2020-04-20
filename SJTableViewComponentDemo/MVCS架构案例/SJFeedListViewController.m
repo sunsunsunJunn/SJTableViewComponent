@@ -9,7 +9,7 @@
 #import "SJFeedListViewController.h"
 #import "SJFeedListViewController+Configure.h"
 #import "SJFeedListViewController+LogicFlow.h"
-#import "SJFeedListViewController+CellModelAdapter.h"
+#import "SJFeedListViewController+Adapter.h"
 #import <MJRefresh/MJRefresh.h>
 #import "SJTableViewController.h"
 

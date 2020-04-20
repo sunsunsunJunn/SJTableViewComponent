@@ -44,7 +44,7 @@
 		04CAE3CC24401FEF0097BFEC /* SJFeedImageCellModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 04CAE3CB24401FEF0097BFEC /* SJFeedImageCellModel.m */; };
 		04CAE3CF24401FFA0097BFEC /* SJFeedTextCellModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 04CAE3CE24401FFA0097BFEC /* SJFeedTextCellModel.m */; };
 		04CAE3D9244550230097BFEC /* SJFeedListViewController+LogicFlow.m in Sources */ = {isa = PBXBuildFile; fileRef = 04CAE3D8244550230097BFEC /* SJFeedListViewController+LogicFlow.m */; };
-		04CAE3DC244550BE0097BFEC /* SJFeedListViewController+CellModelAdapter.m in Sources */ = {isa = PBXBuildFile; fileRef = 04CAE3DB244550BE0097BFEC /* SJFeedListViewController+CellModelAdapter.m */; };
+		04FCB93E244DC217006331D8 /* SJFeedListViewController+Adapter.m in Sources */ = {isa = PBXBuildFile; fileRef = 04FCB93D244DC217006331D8 /* SJFeedListViewController+Adapter.m */; };
 		325B31528E5FE820D8979D79 /* Pods_SJTableViewComponent.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 750788471ACE6D60FD40D62E /* Pods_SJTableViewComponent.framework */; };
 /* End PBXBuildFile section */
 
@@ -142,8 +142,8 @@
 		04CAE3CE24401FFA0097BFEC /* SJFeedTextCellModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SJFeedTextCellModel.m; sourceTree = "<group>"; };
 		04CAE3D7244550230097BFEC /* SJFeedListViewController+LogicFlow.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "SJFeedListViewController+LogicFlow.h"; sourceTree = "<group>"; };
 		04CAE3D8244550230097BFEC /* SJFeedListViewController+LogicFlow.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "SJFeedListViewController+LogicFlow.m"; sourceTree = "<group>"; };
-		04CAE3DA244550BE0097BFEC /* SJFeedListViewController+CellModelAdapter.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "SJFeedListViewController+CellModelAdapter.h"; sourceTree = "<group>"; };
-		04CAE3DB244550BE0097BFEC /* SJFeedListViewController+CellModelAdapter.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "SJFeedListViewController+CellModelAdapter.m"; sourceTree = "<group>"; };
+		04FCB93C244DC217006331D8 /* SJFeedListViewController+Adapter.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "SJFeedListViewController+Adapter.h"; sourceTree = "<group>"; };
+		04FCB93D244DC217006331D8 /* SJFeedListViewController+Adapter.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "SJFeedListViewController+Adapter.m"; sourceTree = "<group>"; };
 		45706CE49F29351E72BC631B /* Pods-SJTableViewComponent.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SJTableViewComponent.debug.xcconfig"; path = "Target Support Files/Pods-SJTableViewComponent/Pods-SJTableViewComponent.debug.xcconfig"; sourceTree = "<group>"; };
 		750788471ACE6D60FD40D62E /* Pods_SJTableViewComponent.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SJTableViewComponent.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		CD59C8393F4BD032BCAB54B3 /* Pods-SJTableViewComponent.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SJTableViewComponent.release.xcconfig"; path = "Target Support Files/Pods-SJTableViewComponent/Pods-SJTableViewComponent.release.xcconfig"; sourceTree = "<group>"; };
@@ -355,8 +355,8 @@
 				04CAE3B124401C3C0097BFEC /* SJFeedListViewController+Configure.m */,
 				04CAE3D7244550230097BFEC /* SJFeedListViewController+LogicFlow.h */,
 				04CAE3D8244550230097BFEC /* SJFeedListViewController+LogicFlow.m */,
-				04CAE3DA244550BE0097BFEC /* SJFeedListViewController+CellModelAdapter.h */,
-				04CAE3DB244550BE0097BFEC /* SJFeedListViewController+CellModelAdapter.m */,
+				04FCB93C244DC217006331D8 /* SJFeedListViewController+Adapter.h */,
+				04FCB93D244DC217006331D8 /* SJFeedListViewController+Adapter.m */,
 				04CAE3AB24401B700097BFEC /* Model */,
 				04CAE3AC24401B700097BFEC /* View */,
 			);
@@ -629,6 +629,7 @@
 				042CB12823920BEE001F5149 /* SJTableViewSection.m in Sources */,
 				042CB13423920BEE001F5149 /* SJLeftTitleRightCopyCell.m in Sources */,
 				04489C8524285A350007BAAC /* SJTableViewPlaceholderHeaderFooterModel.m in Sources */,
+				04FCB93E244DC217006331D8 /* SJFeedListViewController+Adapter.m in Sources */,
 				04CAE3BC24401F630097BFEC /* SJFeedTextCell.m in Sources */,
 				048A6CEC2430E23F00E499D0 /* SJTableViewViewModel.m in Sources */,
 				048A6CF02430E2E100E499D0 /* SJMineModel.m in Sources */,
@@ -637,7 +638,6 @@
 				04CAE3D9244550230097BFEC /* SJFeedListViewController+LogicFlow.m in Sources */,
 				042CB13923920BEE001F5149 /* main.m in Sources */,
 				042CB13723920BEE001F5149 /* SJLeftTitleRightArrowCell.m in Sources */,
-				04CAE3DC244550BE0097BFEC /* SJFeedListViewController+CellModelAdapter.m in Sources */,
 				04CAE3CF24401FFA0097BFEC /* SJFeedTextCellModel.m in Sources */,
 				042CB12723920BEE001F5149 /* SJTableViewImplement.m in Sources */,
 				042CB12F23920BEE001F5149 /* SJAvartarCellModel.m in Sources */,

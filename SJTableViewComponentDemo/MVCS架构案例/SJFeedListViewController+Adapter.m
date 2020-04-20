@@ -1,14 +1,14 @@
 //
-//  SJFeedListViewController+CellModelAdapter.m
+//  SJFeedListViewController+Adapter.m
 //  SJTableViewComponent
 //
-//  Created by SUNJUN on 2020/4/14.
+//  Created by SUNJUN on 2020/4/20.
 //  Copyright © 2020 SUNJUN. All rights reserved.
 //
 
-#import "SJFeedListViewController+CellModelAdapter.h"
+#import "SJFeedListViewController+Adapter.h"
 
-@implementation SJFeedListViewController (CellModelAdapter)
+@implementation SJFeedListViewController (Adapter)
 
 - (NSArray<id<SJTableViewCellModelProtocol>> *)feedModelsWithFeedListDatas:(NSArray *)feedListDatas {
   NSMutableArray *feedModels = [NSMutableArray array];

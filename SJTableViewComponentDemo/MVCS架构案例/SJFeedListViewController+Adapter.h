@@ -1,8 +1,8 @@
 //
-//  SJFeedListViewController+CellModelAdapter.h
+//  SJFeedListViewController+Adapter.h
 //  SJTableViewComponent
 //
-//  Created by SUNJUN on 2020/4/14.
+//  Created by SUNJUN on 2020/4/20.
 //  Copyright © 2020 SUNJUN. All rights reserved.
 //
 
@@ -10,7 +10,7 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface SJFeedListViewController (CellModelAdapter)
+@interface SJFeedListViewController (Adapter)
 
 - (id<SJTableViewCellModelProtocol>)cellModelWithFeedModel:(SJFeedModel *)feedModel;
 

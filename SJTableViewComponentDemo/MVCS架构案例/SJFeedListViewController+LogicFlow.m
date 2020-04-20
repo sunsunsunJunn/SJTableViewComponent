@@ -7,7 +7,7 @@
 //
 
 #import "SJFeedListViewController+LogicFlow.h"
-#import "SJFeedListViewController+CellModelAdapter.h"
+#import "SJFeedListViewController+Adapter.h"
 
 @implementation SJFeedListViewController (LogicFlow)
 
