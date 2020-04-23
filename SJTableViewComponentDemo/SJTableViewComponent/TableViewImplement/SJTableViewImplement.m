@@ -167,6 +167,11 @@
 }
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+  UITableViewCell *cell = [tableView cellForRowAtIndexPath:indexPath];
+  if ([cell respondsToSelector:@selector(didSelectedAtIndexPath:)]) {
+    [(id<SJTableViewCellProtocol>)cell didSelectedAtIndexPath:indexPath];
+  }
+  
   if (self.didSelectRowAtIndexPathBlock) {
     self.didSelectRowAtIndexPathBlock(tableView, indexPath);
   }

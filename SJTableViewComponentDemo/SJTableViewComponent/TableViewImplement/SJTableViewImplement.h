@@ -28,8 +28,8 @@ NS_ASSUME_NONNULL_BEGIN
 - (id<SJTableViewCellModelProtocol>)cellModelForIndexPath:(NSIndexPath *)indexPath;
 
 /**
-  * 获取cellModel 对应的indexPath
-  */
+ * 获取cellModel 对应的indexPath
+ */
 - (NSIndexPath *)indexPathForCellModel:(id<SJTableViewCellModelProtocol>)cellModel;
 
 /**

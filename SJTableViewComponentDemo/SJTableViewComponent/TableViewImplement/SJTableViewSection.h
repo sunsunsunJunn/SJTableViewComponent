@@ -26,8 +26,6 @@ NS_ASSUME_NONNULL_BEGIN
 /** UITableView 的 cellModel 配置数组 */
 @property (nonatomic, strong) NSMutableArray<id<SJTableViewCellModelProtocol>> *rowArray;
 
-
-
 @end
 
 NS_ASSUME_NONNULL_END

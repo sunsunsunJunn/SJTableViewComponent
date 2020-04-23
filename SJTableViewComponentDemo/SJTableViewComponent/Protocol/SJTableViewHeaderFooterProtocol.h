@@ -19,10 +19,10 @@ NS_ASSUME_NONNULL_BEGIN
 @optional
 
 /**
-* @brief 根据数据配置header/footer的UI
-*
-* @param headerFooterModel 数据模型
-*/
+ * @brief 根据数据配置header/footer的UI
+ *
+ * @param headerFooterModel 数据模型
+ */
 - (void)sj_configureHeaderFooterByHeaderFooterModel:(id<SJTableViewHeaderFooterModelProtocol>)headerFooterModel;
 
 /**

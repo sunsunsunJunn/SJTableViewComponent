@@ -33,6 +33,13 @@ NS_ASSUME_NONNULL_BEGIN
  */
 - (void)sj_configureCellByCellModel:(id<SJTableViewCellModelProtocol>)cellModel atIndexPath:(NSIndexPath *)indexPath;
 
+/**
+ * 当前 cell 被选中
+ *
+ * @param indexPath indexPath
+ */
+- (void)didSelectedAtIndexPath:(NSIndexPath *)indexPath;
+
 @end
 
 NS_ASSUME_NONNULL_END

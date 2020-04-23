@@ -11,6 +11,8 @@
 
 @implementation UITableView (SJComponent)
 
+#pragma mark - tableView数据设置
+
 - (void)setSj_oneSectionRowArray:(NSMutableArray<id<SJTableViewCellModelProtocol>> *)sj_oneSectionRowArray {
 	self.firstSection.rowArray = sj_oneSectionRowArray;
 	self.sj_sectionArray = [NSMutableArray arrayWithObject:self.firstSection];
@@ -19,11 +21,11 @@
 
 - (NSMutableArray<id<SJTableViewCellModelProtocol>> *)sj_oneSectionRowArray {
 	NSMutableArray *rowArray = objc_getAssociatedObject(self, _cmd);
+  
 	if (!rowArray) {
 		rowArray = [NSMutableArray array];
 		self.sj_oneSectionRowArray = rowArray;
 	}
-  
 	return rowArray;
 }
 
@@ -49,16 +51,6 @@
 	}
 	return self.sj_sectionArray.firstObject;
 }
-
-- (id<SJTableViewCellModelProtocol>)sj_cellModelForIndexPath:(NSIndexPath *)indexPath {
-	return [self.sj_tableViewImplement cellModelForIndexPath:indexPath];
-}
-
-- (NSIndexPath *)sj_indexPathForCellModel:(id<SJTableViewCellModelProtocol>)cellModel {
-	return [self.sj_tableViewImplement indexPathForCellModel:cellModel];
-}
-
-#pragma mark - Setter Getter
 
 - (void)setSj_sectionArray:(NSMutableArray<SJTableViewSection *> *)sj_sectionArray {
 	objc_setAssociatedObject(self, @selector(sj_sectionArray), sj_sectionArray, OBJC_ASSOCIATION_RETAIN_NONATOMIC);
@@ -115,6 +107,16 @@
 	}
 	return sj_tableViewImplement;
 }
+
+- (id<SJTableViewCellModelProtocol>)sj_cellModelForIndexPath:(NSIndexPath *)indexPath {
+  return [self.sj_tableViewImplement cellModelForIndexPath:indexPath];
+}
+
+- (NSIndexPath *)sj_indexPathForCellModel:(id<SJTableViewCellModelProtocol>)cellModel {
+  return [self.sj_tableViewImplement indexPathForCellModel:cellModel];
+}
+
+#pragma mark - tableView的一些回调处理
 
 - (void)setSj_cellForRowAtIndexPathBlock:(void (^)(UITableViewCell * _Nonnull, NSIndexPath * _Nonnull))sj_cellForRowAtIndexPathBlock {
 	objc_setAssociatedObject(self, @selector(sj_cellForRowAtIndexPathBlock), sj_cellForRowAtIndexPathBlock, OBJC_ASSOCIATION_COPY_NONATOMIC);

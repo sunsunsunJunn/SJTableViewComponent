@@ -76,3 +76,9 @@ section0.header = defaultHeader;
 ```
 
 ### 1.1.2 -  新增TableView滚动的回调，新增Demo
+
+### 1.1.3 -  新增cellProtocol方法，代码格式调整
+
+```
+- (void)didSelectedAtIndexPath:(NSIndexPath *)indexPath;
+```
