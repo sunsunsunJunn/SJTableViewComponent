@@ -82,3 +82,4 @@ section0.header = defaultHeader;
 ```
 - (void)didSelectedAtIndexPath:(NSIndexPath *)indexPath;
 ```
+### 1.1.4 -  headerForView footerForView增加空值判断 防止先走这两代理方法的异常

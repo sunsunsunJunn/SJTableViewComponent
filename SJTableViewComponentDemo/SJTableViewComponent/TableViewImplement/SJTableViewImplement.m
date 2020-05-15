@@ -151,19 +151,25 @@
 }
 
 - (nullable UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section {
-  id<SJTableViewHeaderFooterModelProtocol> header = self.sectionArray[section].header;
+  if ([self validSection:section]) {
+    id<SJTableViewHeaderFooterModelProtocol> header = self.sectionArray[section].header;
+    return [self viewForHeaderFooterWithTableView:tableView
+                                headerFooterModel:header
+                                          section:section];
+  }
   
-  return [self viewForHeaderFooterWithTableView:tableView
-                              headerFooterModel:header
-                                        section:section];
+  return nil;
 }
 
 - (nullable UIView *)tableView:(UITableView *)tableView viewForFooterInSection:(NSInteger)section {
-  id<SJTableViewHeaderFooterModelProtocol> footer = self.sectionArray[section].footer;
+  if ([self validSection:section]) {
+    id<SJTableViewHeaderFooterModelProtocol> footer = self.sectionArray[section].footer;
+    return [self viewForHeaderFooterWithTableView:tableView
+                                headerFooterModel:footer
+                                          section:section];
+  }
   
-  return [self viewForHeaderFooterWithTableView:tableView
-                              headerFooterModel:footer
-                                        section:section];
+  return nil;
 }
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
@@ -252,6 +258,10 @@
 
 - (BOOL)isRegistedCellIdentifier:(NSString *)cellIdentifier {
   return [self.cellReusableIdentifierSet containsObject:cellIdentifier];
+}
+
+- (BOOL)validSection:(NSInteger)section {
+  return section < self.sectionArray.count;
 }
 
 #pragma mark - Setter Getter
