@@ -14,8 +14,8 @@
 #pragma mark - tableView数据设置
 
 - (void)setSj_oneSectionRowArray:(NSMutableArray<id<SJTableViewCellModelProtocol>> *)sj_oneSectionRowArray {
-	self.firstSection.rowArray = sj_oneSectionRowArray;
-	self.sj_sectionArray = [NSMutableArray arrayWithObject:self.firstSection];
+	self.sj_firstSection.rowArray = sj_oneSectionRowArray;
+	self.sj_sectionArray = [NSMutableArray arrayWithObject:self.sj_firstSection];
 	objc_setAssociatedObject(self, @selector(sj_oneSectionRowArray), sj_oneSectionRowArray, OBJC_ASSOCIATION_RETAIN_NONATOMIC);
 }
 
@@ -30,22 +30,22 @@
 }
 
 - (void)setSj_oneSectionHeaderModel:(id<SJTableViewHeaderFooterModelProtocol>)sj_oneSectionHeaderModel {
-	 self.firstSection.header = sj_oneSectionHeaderModel;
+	 self.sj_firstSection.header = sj_oneSectionHeaderModel;
 }
 
 - (id<SJTableViewHeaderFooterModelProtocol>)sj_oneSectionHeaderModel {
-	return self.firstSection.header;
+	return self.sj_firstSection.header;
 }
 
 - (void)setSj_oneSectionFooterModel:(id<SJTableViewHeaderFooterModelProtocol>)sj_oneSectionFooterModel {
-	 self.firstSection.footer = sj_oneSectionFooterModel;
+	 self.sj_firstSection.footer = sj_oneSectionFooterModel;
 }
 
 - (id<SJTableViewHeaderFooterModelProtocol>)sj_oneSectionFooterModel {
-	return self.firstSection.footer;
+	return self.sj_firstSection.footer;
 }
 
-- (SJTableViewSection *)firstSection {
+- (SJTableViewSection *)sj_firstSection {
 	if (self.sj_sectionArray.count == 0) {
 		[self.sj_sectionArray addObject:[[SJTableViewSection alloc] init]];
 	}
